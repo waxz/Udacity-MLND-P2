@@ -11895,7 +11895,7 @@ div#notebook {
 <span class="n">n_failed</span> <span class="o">=</span> <span class="n">student_data</span><span class="p">[</span><span class="n">student_data</span><span class="p">[</span><span class="s1">&#39;passed&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;no&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># TODO： 计算通过率</span>
-<span class="n">grad_rate</span> <span class="o">=</span><span class="mi">100</span><span class="o">*</span><span class="n">n_passed</span><span class="o">/</span><span class="n">n_students</span>
+<span class="n">grad_rate</span> <span class="o">=</span><span class="mf">100.0</span><span class="o">*</span><span class="n">n_passed</span><span class="o">/</span><span class="n">n_students</span>
 
 <span class="c1"># 输出结果</span>
 <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Total number of students: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_students</span><span class="p">))</span>
@@ -11919,7 +11919,7 @@ div#notebook {
 Number of features: 30
 Number of students who passed: 265
 Number of students who failed: 130
-Graduation rate of the class: 67.00%
+Graduation rate of the class: 67.09%
 </pre>
 </div>
 </div>
@@ -12548,58 +12548,58 @@ Testing set has 95 samples.
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training a AdaBoostClassifier using a training set size of 100. . .
-Trained model in 0.2210 seconds
-Made predictions in 0.0090 seconds.
+Trained model in 0.2180 seconds
+Made predictions in 0.0000 seconds.
 F1 score for training set: 0.9583.
-Made predictions in 0.0080 seconds.
+Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7737.
 Training a AdaBoostClassifier using a training set size of 200. . .
-Trained model in 0.1970 seconds
-Made predictions in 0.0110 seconds.
+Trained model in 0.2030 seconds
+Made predictions in 0.0000 seconds.
 F1 score for training set: 0.8651.
-Made predictions in 0.0080 seconds.
+Made predictions in 0.0150 seconds.
 F1 score for test set: 0.7556.
 Training a AdaBoostClassifier using a training set size of 300. . .
-Trained model in 0.2060 seconds
-Made predictions in 0.0120 seconds.
+Trained model in 0.2030 seconds
+Made predictions in 0.0160 seconds.
 F1 score for training set: 0.8399.
-Made predictions in 0.0080 seconds.
+Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7820.
 Training a RandomForestClassifier using a training set size of 100. . .
-Trained model in 0.0500 seconds
-Made predictions in 0.0110 seconds.
+Trained model in 0.0470 seconds
+Made predictions in 0.0000 seconds.
 F1 score for training set: 0.9928.
-Made predictions in 0.0100 seconds.
+Made predictions in 0.0160 seconds.
 F1 score for test set: 0.6812.
 Training a RandomForestClassifier using a training set size of 200. . .
-Trained model in 0.0520 seconds
-Made predictions in 0.0110 seconds.
+Trained model in 0.0470 seconds
+Made predictions in 0.0150 seconds.
 F1 score for training set: 0.9888.
-Made predictions in 0.0100 seconds.
+Made predictions in 0.0160 seconds.
 F1 score for test set: 0.7538.
 Training a RandomForestClassifier using a training set size of 300. . .
-Trained model in 0.0600 seconds
-Made predictions in 0.0110 seconds.
+Trained model in 0.0470 seconds
+Made predictions in 0.0150 seconds.
 F1 score for training set: 0.9951.
-Made predictions in 0.0100 seconds.
+Made predictions in 0.0160 seconds.
 F1 score for test set: 0.7287.
 Training a SVC using a training set size of 100. . .
-Trained model in 0.0020 seconds
-Made predictions in 0.0010 seconds.
+Trained model in 0.0000 seconds
+Made predictions in 0.0000 seconds.
 F1 score for training set: 0.8537.
-Made predictions in 0.0010 seconds.
+Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7871.
 Training a SVC using a training set size of 200. . .
-Trained model in 0.0060 seconds
-Made predictions in 0.0030 seconds.
+Trained model in 0.0000 seconds
+Made predictions in 0.0150 seconds.
 F1 score for training set: 0.8831.
-Made predictions in 0.0020 seconds.
+Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7619.
 Training a SVC using a training set size of 300. . .
-Trained model in 0.0100 seconds
-Made predictions in 0.0080 seconds.
+Trained model in 0.0160 seconds
+Made predictions in 0.0000 seconds.
 F1 score for training set: 0.8620.
-Made predictions in 0.0030 seconds.
+Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7838.
 </pre>
 </div>
@@ -12779,7 +12779,7 @@ SVC模型能最大程度减少学校在服务器上的开支。</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答: </strong>
-假设每一个同学的特征都对应了空间中的一个点，相似的点由于其相似性，会聚集在一起。这样我们可以在<strong>通过的同学的点集</strong>和<strong>未通过的同学的点集</strong>中间找到一个分界面，作为两者的界限。计算两个点集到此平面的最近点的距离，能使最近点的距离的平面就是我们要找的分界面。</p>
+假设每一个同学的特征都对应了空间中的一个点，通过核函数可以将较低维度线性不可分的点，映射到高维空间，这样就线性可分了。相似的点由于其相似性，会聚集在一起。这样我们可以在<strong>通过的同学的点集</strong>和<strong>未通过的同学的点集</strong>中间找到一个分界面，作为两者的界限。计算两个点集到此平面的最近点的距离，能使最近点的距离最大的平面就是我们要找的分界面。这样的分界面可以使两个点集的间隔最大，在预测新数据时有更好的预测能力。</p>
 <p>对于要预测的点，计算它到分界面的距离，该点的通过结果与同侧点相同。</p>
 
 </div>
